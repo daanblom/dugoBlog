@@ -1,0 +1,45 @@
+{{ $author := . }}
+{{ if $author }}
+<div class="author-card">
+  <div class="row">
+    <div class="col-md-2">
+      {{ if $author.avatar }}
+        <img src="{{ $author.avatar }}" alt="{{ $author.name }}" class="author-avatar">
+      {{ else }}
+        <div class="author-avatar-placeholder">{{ substr $author.name 0 1 }}</div>
+      {{ end }}
+    </div>
+    <div class="col-md-10">
+      <h4 class="author-name">{{ $author.name }}</h4>
+      {{ if $author.bio }}
+        <p class="author-bio">{{ $author.bio }}</p>
+      {{ end }}
+      {{ if $author.role }}
+        <p class="author-role">{{ $author.role }} at {{ $author.company }}</p>
+      {{ end }}
+      <div class="author-social">
+        {{ if $author.website }}
+          <a href="{{ $author.website }}" target="_blank" rel="noopener" class="author-link">
+            <i class="fas fa-globe"></i> Website
+          </a>
+        {{ end }}
+        {{ if $author.twitter }}
+          <a href="https://twitter.com/{{ replace $author.twitter "@" "" }}" target="_blank" rel="noopener" class="author-link">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+        {{ end }}
+        {{ if $author.github }}
+          <a href="https://github.com/{{ $author.github }}" target="_blank" rel="noopener" class="author-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        {{ end }}
+        {{ if $author.linkedin }}
+          <a href="https://linkedin.com/in/{{ $author.linkedin }}" target="_blank" rel="noopener" class="author-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }} 
