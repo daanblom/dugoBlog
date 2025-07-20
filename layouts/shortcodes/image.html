@@ -1,0 +1,5 @@
+{{ with resources.Get (.Get "src") }}
+<div class="container" style="padding:0;"><img style="width: inherit; "src="{{ .RelPermalink }}" alt="{{ .Get "alt" | default "Image" }}"></div>
+{{ else }}
+<div class="container" style="padding:0;"><img style="width: inherit; "src="{{ .Get "src" }}" alt="{{ .Get "alt" | default "Image" }}"></div>
+{{ end }}
