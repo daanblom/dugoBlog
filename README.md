@@ -1,23 +1,17 @@
-# Blank
-
-Blank — starter [Hugo](https://gohugo.io/) theme for developers. Use it to make your own theme.
-
-**[Demo](https://blank-demo.netlify.app/)**
-
-![Blank theme screenshot](https://github.com/Vimux/blank/blob/master/images/splash.png)
+![dugoBlog theme screenshot](https://github.com/Vimux/blank/blob/master/images/splash.png)
 
 ## Installation
 
 In your Hugo site `themes` directory, run:
 
 ```
-git clone https://github.com/vimux/blank
+git clone https://github.com/daanblom.com/dugoBlog 
 ```
 
 Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `blank`.
 
 ```
-theme = "blank"
+theme = "dugoBlog"
 ```
 
 For more information read the official [quick start guide](https://gohugo.io/getting-started/quick-start/) of Hugo.
@@ -29,3 +23,7 @@ Have you found a bug or got an idea for a new feature? Feel free to use the [iss
 ## License
 
 This theme is released under the [MIT license](https://github.com/Vimux/blank/blob/master/LICENSE).
+
+### Special thanks
+
+https://github.com/vimux/blank
